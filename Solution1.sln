@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot", "Bot\Bot.csproj", "{EE95F380-D5EF-4DA0-BC78-4AA2DE5FECF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{86DFEA5E-6D71-441D-9986-067335D8F6FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcces", "DataAcces\DataAcces.csproj", "{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE95F380-D5EF-4DA0-BC78-4AA2DE5FECF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE95F380-D5EF-4DA0-BC78-4AA2DE5FECF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE95F380-D5EF-4DA0-BC78-4AA2DE5FECF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE95F380-D5EF-4DA0-BC78-4AA2DE5FECF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86DFEA5E-6D71-441D-9986-067335D8F6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86DFEA5E-6D71-441D-9986-067335D8F6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86DFEA5E-6D71-441D-9986-067335D8F6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86DFEA5E-6D71-441D-9986-067335D8F6FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
