@@ -39,7 +39,6 @@ public class BotService:IBotService
                 var callbackQuery = update.CallbackQuery;
                 if (callbackQuery.Data == "callback_data_1")
                 {
-                    _logger.LogError(callbackQuery.Message.Chat.Id.ToString());
                     await bot.SendTextMessageAsync(
                         chatId: callbackQuery.Message.Chat.Id,
                         text: "Задачи на уравнения [URL](https://disk.yandex.ru/i/PDFvczv2r-LNvA)");
@@ -60,13 +59,14 @@ public class BotService:IBotService
                 {
                     if (_users.All(x => x.Id != msg.Chat.Id))
                     {
-                        _users.Add(new TelegramUser()
+                        var user = new TelegramUser()
                         {
                             Id = msg.Chat.Id,
                             Name = msg.Chat.Username
-                        });
+                        };
+                        _users.Add(user);
+                        _logger.LogInformation("добавлен пользователь {user}", user.Name);
                     }
-                    _logger.LogCritical(_users.Count.ToString());
                     var keyboard = new InlineKeyboardMarkup(new[]
                     {
                         new []

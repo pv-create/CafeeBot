@@ -1,10 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot", "Bot\Bot.csproj", "{EE95F380-D5EF-4DA0-BC78-4AA2DE5FECF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{86DFEA5E-6D71-441D-9986-067335D8F6FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcces", "DataAcces\DataAcces.csproj", "{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{5D4EF65D-4BFF-47DC-A1E9-B21F6D037520}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{31EEA1F9-8BFD-46B5-A15A-41B183E7CAEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +29,9 @@ Global
 		{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00281083-29BC-44EA-ADDD-02DBD4CC7AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EEA1F9-8BFD-46B5-A15A-41B183E7CAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EEA1F9-8BFD-46B5-A15A-41B183E7CAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EEA1F9-8BFD-46B5-A15A-41B183E7CAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EEA1F9-8BFD-46B5-A15A-41B183E7CAEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
