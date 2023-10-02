@@ -30,6 +30,21 @@ namespace WebApi.Migrations
 
                     b.ToTable("MathTasks");
                 });
+
+            modelBuilder.Entity("DataAcces.Models.User", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -11,5 +11,6 @@ public class ApplicationDbContext:DbContext
     }
 
     public DbSet<MathTask> MathTasks { get; set; }
+    public DbSet<TelegramUser> Users { get; set; }
 }
 

@@ -1,3 +1,4 @@
+using DataAcces.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Telegram.Bot;
@@ -10,22 +11,25 @@ namespace TelegramBotExperiments.Services;
 
 public class BotService:IBotService
 {
+    private readonly List<TelegramUser> _users;
     private readonly ILogger<BotService> _logger;
     private readonly IConfiguration _configuration;
     
-    static ITelegramBotClient bot = new TelegramBotClient("5847424294:AAFjHdNfKTuvYsW71museg7LrzcbUEyXOAk");
+     static ITelegramBotClient bot = new TelegramBotClient("5847424294:AAFjHdNfKTuvYsW71museg7LrzcbUEyXOAk");
 
     public BotService(
+        List<TelegramUser> users,
         ILogger<BotService> logger,
         IConfiguration configuration)
     {
         _configuration = configuration;
         _logger = logger;
+        _users = users;
     }
     
     
     
-    private static async Task HandleUpdateAsync(
+    private async Task HandleUpdateAsync(
             ITelegramBotClient botClient,
             Update update,
             CancellationToken cancellationToken)
@@ -35,16 +39,17 @@ public class BotService:IBotService
                 var callbackQuery = update.CallbackQuery;
                 if (callbackQuery.Data == "callback_data_1")
                 {
+                    _logger.LogError(callbackQuery.Message.Chat.Id.ToString());
                     await bot.SendTextMessageAsync(
                         chatId: callbackQuery.Message.Chat.Id,
-                        text: "Задачи на уравнения [URL](https://docs.yandex.ru/docs/view?url=ya-disk%3A%2F%2F%2Fdisk%2FЗадачи%2FEquations.pdf&name=Equations.pdf&uid=724085872)");
+                        text: "Задачи на уравнения [URL](https://disk.yandex.ru/i/PDFvczv2r-LNvA)");
                 }
                 
                 if (callbackQuery.Data == "callback_data_2")
                 {
                     await bot.SendTextMessageAsync(
                         chatId: callbackQuery.Message.Chat.Id,
-                        text: "Задачи на неравенства [URL](https://docs.yandex.ru/docs/view?url=ya-disk%3A%2F%2F%2Fdisk%2FЗадачи%2FNeraw.pdf&name=Neraw.pdf&uid=7240858722)");
+                        text: "Задачи на неравенства [URL](https://disk.yandex.ru/i/BVmloTJV2E2gWg)");
                 }
             }
             
@@ -53,6 +58,15 @@ public class BotService:IBotService
                 var msg = update.Message;
                 if (msg.Text.ToLower() == "/start")
                 {
+                    if (_users.All(x => x.Id != msg.Chat.Id))
+                    {
+                        _users.Add(new TelegramUser()
+                        {
+                            Id = msg.Chat.Id,
+                            Name = msg.Chat.Username
+                        });
+                    }
+                    _logger.LogCritical(_users.Count.ToString());
                     var keyboard = new InlineKeyboardMarkup(new[]
                     {
                         new []
@@ -75,7 +89,14 @@ public class BotService:IBotService
                 }
             }
         }
-    
+
+
+    public async Task SendMessageAsync(long userId, string text)
+    {
+        await bot.SendTextMessageAsync(
+            chatId: userId,
+            text: text);
+    }
     
     
     private  async Task HandleErrorAsync(
