@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "WebApi/1.0.0": {
         "dependencies": {
+          "CoreAdmin": "2.7.0",
           "DataAcces": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.5",
           "Microsoft.EntityFrameworkCore": "7.0.11",
@@ -16,6 +17,18 @@
         },
         "runtime": {
           "WebApi.dll": {}
+        }
+      },
+      "CoreAdmin/2.7.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.11",
+          "NonFactors.Grid.Core.Mvc6": "7.1.0"
+        },
+        "runtime": {
+          "lib/net7.0/DotNetEd.CoreAdmin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -187,6 +200,14 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.1.1"
+          }
+        }
+      },
+      "NonFactors.Grid.Core.Mvc6/7.1.0": {
+        "runtime": {
+          "lib/net6.0/Mvc.Grid.Core.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.0.0"
           }
         }
       },
@@ -413,6 +434,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CoreAdmin/2.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qwa33DYykMuQ6JCeDoIPI3NMU91MEWI35ukK/FcMCeWtNjDxuwaWoTRS8P6+vA3cF81AkuIsxCU7CH7yzK0ofw==",
+      "path": "coreadmin/2.7.0",
+      "hashPath": "coreadmin.2.7.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
@@ -573,6 +601,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "NonFactors.Grid.Core.Mvc6/7.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rvPZICY/Gyca1vEuQmxRXR1PHxlxYmw7JzBjAF6wdQy+bXyikT5aq2kWO+4V0wl62uV6u0fFtL6nVnl9IKniXg==",
+      "path": "nonfactors.grid.core.mvc6/7.1.0",
+      "hashPath": "nonfactors.grid.core.mvc6.7.1.0.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
       "type": "package",

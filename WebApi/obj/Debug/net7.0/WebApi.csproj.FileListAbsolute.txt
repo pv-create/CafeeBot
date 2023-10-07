@@ -69,3 +69,6 @@
 /Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/obj/Debug/net7.0/WebApi.pdb
 /Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/obj/Debug/net7.0/WebApi.genruntimeconfig.cache
 /Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/obj/Debug/net7.0/ref/WebApi.dll
+/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/bin/Debug/net7.0/WebApi.staticwebassets.runtime.json
+/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/bin/Debug/net7.0/DotNetEd.CoreAdmin.dll
+/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/bin/Debug/net7.0/Mvc.Grid.Core.dll

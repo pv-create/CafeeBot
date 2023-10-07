@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AHLWzSEMFRmPlOsRe7MMiSj99BhxNTEfufhGYrTdE861EpInp/OqPPhek+nY9ur7+2m2vUCkW6iM00Ilam+/Cg==",
+  "dgSpecHash": "+Nv6Ekg0uuCNN+ADz+9vDewEId0VDQFTi13iHjE/wFE/dWmgVJTvItmPQRBU3Jwg/NX7xbrRceXCrYn0zFaqPA==",
   "success": true,
   "projectFilePath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/WebApi.csproj",
   "expectedPackageFiles": [
+    "/Users/pavelvilkov/.nuget/packages/coreadmin/2.7.0/coreadmin.2.7.0.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/microsoft.aspnetcore.openapi/7.0.5/microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/microsoft.data.sqlite.core/7.0.11/microsoft.data.sqlite.core.7.0.11.nupkg.sha512",
@@ -27,6 +28,7 @@
     "/Users/pavelvilkov/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/pavelvilkov/.nuget/packages/nonfactors.grid.core.mvc6/7.1.0/nonfactors.grid.core.mvc6.7.1.0.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",

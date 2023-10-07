@@ -65,7 +65,7 @@ public class BotService:IBotService
                             Name = msg.Chat.Username
                         };
                         _users.Add(user);
-                        _logger.LogInformation("добавлен пользователь {user}", user.Name);
+                        _logger.LogInformation("добавлен пользователь {user} {Id}", user.Name, user.Id);
                     }
                     var keyboard = new InlineKeyboardMarkup(new[]
                     {

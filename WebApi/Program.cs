@@ -14,6 +14,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString,  b => b.MigrationsAssembly("WebApi")));
 
+builder.Services.AddCoreAdmin();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,5 +30,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapDefaultControllerRoute();
 
 app.Run();

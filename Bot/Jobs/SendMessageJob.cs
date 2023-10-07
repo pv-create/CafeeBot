@@ -27,7 +27,7 @@ public class SendMessageJob:IJob
     {
         foreach (var user in _users)
         {
-            var text = user.Name + " " + "is the best";
+            var text = "[URL](https://disk.yandex.ru/i/PDFvczv2r-LNvA)";
             await _bot.SendMessageAsync(user.Id, text);
             _logger.LogInformation("отправлено сообщение пользователю {user}", user.Name);
         }

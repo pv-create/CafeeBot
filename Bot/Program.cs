@@ -65,7 +65,6 @@ namespace TelegramBotExperiments
 
             var bot = ActivatorUtilities.CreateInstance<BotService>(host.Services);
             
-            
             Thread myThread = new Thread(() =>
             {
                 bot.StartBot();
@@ -73,12 +72,6 @@ namespace TelegramBotExperiments
             myThread.Start();
             
             host.Run();
-            //var shd = ActivatorUtilities.CreateInstance<ShedulerService>(host.Services);
-
-            //await shd.StartSheduler();
-           // Console.ReadKey();
-          
-            
         }
 
         static void BuildConfig(IConfigurationBuilder builder)
