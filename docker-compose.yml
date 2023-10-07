@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+      
+  
+  bot:
+    image: ${DOCKER_REGISTRY-}bot
+    build:
+      context: .
+      dockerfile: Bot/Dockerfile
+      
