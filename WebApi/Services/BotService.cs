@@ -127,7 +127,7 @@ public class BotService:IBotService
     {
         foreach (var user in _users)
         {
-            var text = "ты лох  ";
+            var text = message;
             await SendMessageAsync(user.Id, text);
             _logger.LogInformation("отправлено сообщение пользователю {user}", user.Name);
         }
