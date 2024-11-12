@@ -1,11 +1,12 @@
 using DataAcces.Data;
+using DataAcces.Models;
 using Microsoft.AspNetCore.Mvc;
 using TelegramBotExperiments.Interfaces;
 
 namespace WebApi.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]/[action]")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -18,15 +19,19 @@ public class WeatherForecastController : ControllerBase
     private readonly ApplicationDbContext _application;
 
     private readonly IBotService _bot;
+    
+    private readonly ApplicationDbContext _applicationContext;
     public WeatherForecastController(
         ILogger<WeatherForecastController> logger, 
         ApplicationDbContext context,
-        IBotService bot
+        IBotService bot,
+        ApplicationDbContext applicationContext
         )
     {
         _logger = logger;
         _application = context;
         _bot = bot;
+        _applicationContext = applicationContext;
     }
 
 
@@ -34,7 +39,13 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "SendAll")]
     public async Task<ActionResult> SendAll(string message)
     {
-        await _bot.SendAll(string.Empty);
+        await _bot.SendAll(message);
         return Ok();
+    }
+
+    [HttpGet(Name = "GetUsers")]
+    public ActionResult<List<TelegramUser>> GetUsers()
+    {
+        return Ok(_applicationContext.Users.ToList());
     }
 }

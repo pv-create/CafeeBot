@@ -1,31 +1,35 @@
+using DataAcces.Data;
 using DataAcces.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.ReplyMarkups;
 using TelegramBotExperiments.Interfaces;
 
-namespace TelegramBotExperiments.Services;
+namespace WebApi.Services;
 
 public class BotService:IBotService
 {
     private readonly List<TelegramUser> _users;
     private readonly ILogger<BotService> _logger;
     private readonly IConfiguration _configuration;
+    private readonly IDbContextFactory<ApplicationDbContext> _contextFactory;
     
      static ITelegramBotClient bot = new TelegramBotClient("5847424294:AAFjHdNfKTuvYsW71museg7LrzcbUEyXOAk");
 
     public BotService(
         List<TelegramUser> users,
         ILogger<BotService> logger,
-        IConfiguration configuration)
+        IConfiguration configuration,
+        IDbContextFactory<ApplicationDbContext> contextFactory)
     {
         _configuration = configuration;
         _logger = logger;
         _users = users;
+        _contextFactory = contextFactory;
     }
-    
-    
     
     private async Task HandleUpdateAsync(
             ITelegramBotClient botClient,
@@ -55,26 +59,31 @@ public class BotService:IBotService
                 var msg = update.Message;
                 if (msg.Text.ToLower() == "/start")
                 {
-                    if (_users.All(x => x.Id != msg.Chat.Id))
+                    using (var context = await _contextFactory.CreateDbContextAsync())
                     {
-                        var user = new TelegramUser()
+                        if (context.Users.All(x => x.Id != msg.Chat.Id))
                         {
-                            Id = msg.Chat.Id,
-                            Name = msg.Chat.Username
-                        };
-                        _users.Add(user);
-                        _logger.LogInformation("добавлен пользователь {user} {Id}", user.Name, user.Id);
+                            var user = new TelegramUser()
+                            {
+                                Id = msg.Chat.Id,
+                                Name = msg.Chat.Username
+                            };
+                            context.Users.Add(user);
+                            await context.SaveChangesAsync();
+                            _logger.LogInformation("добавлен пользователь {user} {Id}", user.Name, user.Id);
+                        }
                     }
+                    
+                    
+                    
                     var keyboard = new InlineKeyboardMarkup(new[]
                     {
                         new []
                         {
-                            InlineKeyboardButton.WithCallbackData("Уравнения", "callback_data_1"),
-                            InlineKeyboardButton.WithCallbackData("Неравенства", "callback_data_2")
-                        },
-                        new []
-                        {
-                            InlineKeyboardButton.WithCallbackData("Геометрия", "callback_data_3")
+                            InlineKeyboardButton.WithWebApp(
+                                text: "Открыть веб-приложение",
+                                webApp: new WebAppInfo { Url = "https://catcoffe.ru" }
+                            )
                         }
                     });
 
@@ -111,7 +120,7 @@ public class BotService:IBotService
         var cancellationToken = cts.Token;
         var receiverOptions = new ReceiverOptions
         {
-            AllowedUpdates = { }, // receive all update types
+            AllowedUpdates = { },
         };
         
         bot.StartReceiving(
@@ -125,11 +134,15 @@ public class BotService:IBotService
 
     public async Task SendAll(string message)
     {
-        foreach (var user in _users)
+        using (var context = await _contextFactory.CreateDbContextAsync())
         {
-            var text = message;
-            await SendMessageAsync(user.Id, text);
-            _logger.LogInformation("отправлено сообщение пользователю {user}", user.Name);
+            foreach (var user in context.Users.ToList())
+            {
+                var text = message;
+                await SendMessageAsync(user.Id, text);
+                _logger.LogInformation("отправлено сообщение пользователю {user}", user.Name);
+            }
+
         }
     }
 }
