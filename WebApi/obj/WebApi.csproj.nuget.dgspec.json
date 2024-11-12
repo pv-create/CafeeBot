@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/WebApi.csproj": {}
+    "/Users/pavelvilkov/Desktop/projects/bott/Bott/WebApi/WebApi.csproj": {}
   },
   "projects": {
-    "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj": {
+    "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj",
+        "projectUniqueName": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj",
         "projectName": "DataAcces",
-        "projectPath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj",
+        "projectPath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj",
         "packagesPath": "/Users/pavelvilkov/.nuget/packages/",
-        "outputPath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/obj/",
+        "outputPath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/pavelvilkov/.nuget/NuGet/NuGet.Config"
@@ -65,23 +65,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/WebApi.csproj": {
+    "/Users/pavelvilkov/Desktop/projects/bott/Bott/WebApi/WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/WebApi.csproj",
+        "projectUniqueName": "/Users/pavelvilkov/Desktop/projects/bott/Bott/WebApi/WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/WebApi.csproj",
+        "projectPath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/WebApi/WebApi.csproj",
         "packagesPath": "/Users/pavelvilkov/.nuget/packages/",
-        "outputPath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/WebApi/obj/",
+        "outputPath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/WebApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/pavelvilkov/.nuget/NuGet/NuGet.Config"
@@ -97,8 +107,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj": {
-                "projectPath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj"
+              "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj": {
+                "projectPath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj"
               }
             }
           }
@@ -131,9 +141,21 @@
               "target": "Package",
               "version": "[7.0.11, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Quartz.AspNetCore": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[22.0.2, )"
             }
           },
           "imports": [
@@ -147,6 +169,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -155,7 +191,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

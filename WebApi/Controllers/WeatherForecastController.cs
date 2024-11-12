@@ -1,5 +1,6 @@
 using DataAcces.Data;
 using Microsoft.AspNetCore.Mvc;
+using TelegramBotExperiments.Interfaces;
 
 namespace WebApi.Controllers;
 
@@ -16,21 +17,24 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ApplicationDbContext _application;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, ApplicationDbContext context)
+    private readonly IBotService _bot;
+    public WeatherForecastController(
+        ILogger<WeatherForecastController> logger, 
+        ApplicationDbContext context,
+        IBotService bot
+        )
     {
         _logger = logger;
         _application = context;
+        _bot = bot;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+
+    
+    [HttpGet(Name = "SendAll")]
+    public async Task<ActionResult> SendAll(string message)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        await _bot.SendAll(string.Empty);
+        return Ok();
     }
 }

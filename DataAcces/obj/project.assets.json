@@ -1271,11 +1271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj",
+      "projectUniqueName": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj",
       "projectName": "DataAcces",
-      "projectPath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj",
+      "projectPath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj",
       "packagesPath": "/Users/pavelvilkov/.nuget/packages/",
-      "outputPath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/obj/",
+      "outputPath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/pavelvilkov/.nuget/NuGet/NuGet.Config"
@@ -1329,12 +1329,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

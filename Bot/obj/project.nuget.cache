@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "etbMrjYReOE1/4f/ry754rLMeYCLbob4/Kz113RkFUr+24RrFkD/sMnKJmj1k/zNkfLZGcfMZKV0N7rvcgzzpA==",
+  "dgSpecHash": "svaKus4bNSA=",
   "success": true,
-  "projectFilePath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/Bot/Bot.csproj",
+  "projectFilePath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/Bot/Bot.csproj",
   "expectedPackageFiles": [
     "/Users/pavelvilkov/.nuget/packages/microsoft.data.sqlite.core/7.0.11/microsoft.data.sqlite.core.7.0.11.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/microsoft.entityframeworkcore/7.0.11/microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
@@ -73,7 +73,10 @@
     "/Users/pavelvilkov/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/telegram.bot/19.0.0/telegram.bot.19.0.0.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/telegram.bots/5.9.0/telegram.bots.5.9.0.nupkg.sha512",
-    "/Users/pavelvilkov/.nuget/packages/telegram.bots.extensions.polling/5.9.0/telegram.bots.extensions.polling.5.9.0.nupkg.sha512"
+    "/Users/pavelvilkov/.nuget/packages/telegram.bots.extensions.polling/5.9.0/telegram.bots.extensions.polling.5.9.0.nupkg.sha512",
+    "/Users/pavelvilkov/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/pavelvilkov/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/pavelvilkov/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.14/microsoft.netcore.app.host.osx-arm64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

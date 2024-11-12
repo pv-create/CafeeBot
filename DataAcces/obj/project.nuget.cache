@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mrUHaQf/dvU30b5/9f01rhMUiOaZj4PfFnVC/ukCVMqb6jMI9eaoxAj8QJ+og60jqIRf71BWCWZyWTC330h3LQ==",
+  "dgSpecHash": "Gu16PG6ocy4=",
   "success": true,
-  "projectFilePath": "/Users/pavelvilkov/Desktop/teacher-project/tg-botProject/Solution1/DataAcces/DataAcces.csproj",
+  "projectFilePath": "/Users/pavelvilkov/Desktop/projects/bott/Bott/DataAcces/DataAcces.csproj",
   "expectedPackageFiles": [
     "/Users/pavelvilkov/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/microsoft.data.sqlite.core/7.0.11/microsoft.data.sqlite.core.7.0.11.nupkg.sha512",
@@ -31,7 +31,9 @@
     "/Users/pavelvilkov/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/pavelvilkov/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/pavelvilkov/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
+    "/Users/pavelvilkov/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/Users/pavelvilkov/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/pavelvilkov/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

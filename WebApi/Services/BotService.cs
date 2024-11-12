@@ -1,6 +1,4 @@
 using DataAcces.Models;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
@@ -123,5 +121,15 @@ public class BotService:IBotService
             cancellationToken
         );
         Console.ReadLine();
+    }
+
+    public async Task SendAll(string message)
+    {
+        foreach (var user in _users)
+        {
+            var text = "ты лох  ";
+            await SendMessageAsync(user.Id, text);
+            _logger.LogInformation("отправлено сообщение пользователю {user}", user.Name);
+        }
     }
 }
